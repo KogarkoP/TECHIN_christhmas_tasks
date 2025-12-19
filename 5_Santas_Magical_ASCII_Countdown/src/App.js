@@ -21,9 +21,9 @@ const App = () => {
   };
 
   const getDigitColor = (time) => {
-    if (time > 7) return "green";
+    if (time > 7) return "red";
     if (time > 3) return "gold";
-    return "red";
+    return "green";
   };
 
   useEffect(() => {
