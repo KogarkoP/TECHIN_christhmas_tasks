@@ -4,13 +4,13 @@ const workshopsData = [
   [10, 2],
 ];
 
-const workshopsResultCalculation = () => {
+const workshopsResultCalculation = (data) => {
   let total = 0;
 
-  for (let i = 0; i < workshopsData.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     let sum = 0;
-    for (let j = 0; j < workshopsData[i].length; j++) {
-      sum += workshopsData[i][j];
+    for (let j = 0; j < data[i].length; j++) {
+      sum += data[i][j];
     }
 
     console.log(`Workshop ${i + 1} made ${sum} gifts`);
@@ -20,4 +20,4 @@ const workshopsResultCalculation = () => {
   console.log(`Santa’s total gift count is ${total}`);
 };
 
-workshopsResultCalculation();
+workshopsResultCalculation(workshopsData);
