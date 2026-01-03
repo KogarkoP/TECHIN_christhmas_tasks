@@ -6,9 +6,10 @@ const boughtItemsInStores = [
 
 const calculateSantaExpenses = (stores) => {
   let totalSpent = 0;
-
+  let totalItems = 0;
   for (let i = 0; i < stores.length; i++) {
     let storeTotal = 0;
+
     for (let j = 0; j < stores[i].length; j++) {
       storeTotal += stores[i][j];
     }
@@ -18,11 +19,14 @@ const calculateSantaExpenses = (stores) => {
         stores[i].length
       } items were bought and Santa spent ${storeTotal.toFixed(2)}€`
     );
+    totalItems += stores[i].length;
     totalSpent += storeTotal;
   }
 
   console.log(
-    `Santa totally spent ${totalSpent.toFixed(2)}€ in ${stores.length} stores`
+    `Santa totally spent ${totalSpent.toFixed(2)}€ in ${
+      stores.length
+    } stores and bought ${totalItems} items`
   );
 };
 
